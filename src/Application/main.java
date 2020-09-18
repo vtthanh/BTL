@@ -2,6 +2,8 @@ package Application;
 
 import com.gtranslate.Language;
 import com.gtranslate.Translator;
+import database.DBManager;
+import database.Database;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,5 +44,8 @@ public class main {
 //        in.close();
 //        return response.toString();
 //    }
+    public static void main(String[] args) {
+        DBManager manager = new DBManager();
+    }
 
 }
