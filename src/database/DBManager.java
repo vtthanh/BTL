@@ -80,11 +80,9 @@ public class DBManager {
     public void deleteWord(String tager){
         String sql = "DELETE FROM "+Database.TABLENAME+" WHERE "+ Database.COLUME_WORD_TARGET+" = ?";
         try {
-            PreparedStatement pstmt = connection.prepareStatement(sql)
+            PreparedStatement pstmt = connection.prepareStatement(sql);
             pstmt.setString(1, tager);
             pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+        } catch (SQLException e) {}
     }
 }
